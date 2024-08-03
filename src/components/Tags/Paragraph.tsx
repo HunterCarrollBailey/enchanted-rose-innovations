@@ -12,7 +12,7 @@ const Paragraph: React.FC<ParagraphProps> = ({
     addClasses,
 }) => {
     return (
-        <p id={id} className={`text-justify w-full xl:w-[65%] text-xl mx-auto lg:leading-relaxed ${addClasses}`}>
+        <p id={id} className={`text-justify w-full xl:w-[85%] text-lg mx-auto lg:leading-relaxed ${addClasses}`}>
             {children}
         </p>
     )

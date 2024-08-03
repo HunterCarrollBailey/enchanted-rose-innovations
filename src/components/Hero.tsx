@@ -29,7 +29,7 @@ export default function Hero() {
         advanced digital tools, we have the expertise to help you achieve your
         goals.
       </Paragraph>
-      <div className="w-full xl:w-[65%] mx-auto">
+      <div className="w-full xl:w-[85%] mx-auto">
         <Button>
           <Link href={"/about"}>Learn More</Link>
         </Button>

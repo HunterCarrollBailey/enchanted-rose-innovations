@@ -16,15 +16,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={
-          inter.className +
-          "flex flex-col flex-wrap min-h-screen bg-slate-950 bg-rose bg-contain bg-no-repeat bg-center text-slate-200"
-        }
-      >
-        <main className="flex flex-col flex-wrap min-h-screen overflow-scroll noscrollbar backdrop-blur-sm">
-        <Header />
+    <html
+      lang="en"
+      className="min-h-screen bg-slate-950 bg-rose bg-contain bg-no-repeat bg-center"
+    >
+      <body className={inter.className + "text-slate-200"}>
+        <main className="flex flex-col min-h-screen max-h-screen overflow-scroll noscrollbar backdrop-blur-sm text-slate-200">
+          <Header />
           {children}
         </main>
       </body>

@@ -1,8 +1,8 @@
 import Card from "./Tags/Card";
 export default function CoreValues() {
   return (
-    <div className="flex flex-row flex-wrap place-content-center gap-5 p-5">
-      <Card addClasses="basis-4/4 md:basis-3/4 lg:basis-1/4">
+    <div className="flex flex-row flex-wrap place-content-center gap-5">
+      <Card addClasses="basis-4/4 md:basis-3/4 lg:basis-1/3">
         <h3 className="text-xl font-semibold text-center mb-[1%]">Education</h3>
         <p className="text-lg lg:leading-relaxed">
           The technological landscape is ever-changing, and so are we. We are
@@ -11,7 +11,7 @@ export default function CoreValues() {
           our clients.
         </p>
       </Card>
-      <Card addClasses="basis-4/4 md:basis-3/4 lg:basis-1/4">
+      <Card addClasses="basis-4/4 md:basis-3/4 lg:basis-1/3">
         <h3 className="text-xl font-semibold text-center mb-[1%]">
           Responsibility
         </h3>
@@ -21,7 +21,7 @@ export default function CoreValues() {
           honesty, and ethical practices in all of our interactions.
         </p>
       </Card>
-      <Card addClasses="basis-4/4 md:basis-3/4 lg:basis-1/4">
+      <Card addClasses="basis-4/4 md:basis-3/4 lg:basis-1/3">
         <h3 className="text-xl font-semibold text-center mb-[1%]">
           Innovation
         </h3>
