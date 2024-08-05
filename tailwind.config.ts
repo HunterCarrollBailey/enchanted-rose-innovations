@@ -9,10 +9,12 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        'rose': "url(../assets/EnchantedRoseLogo.svg)"
+        'rose': "url(../assets/EnchantedRoseLogo.svg)",
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss-animated')
+  ],
 };
 export default config;

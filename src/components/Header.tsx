@@ -1,83 +1,29 @@
-"use client";
+'use client'
+import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { useState } from "react";
-
 export default function Header() {
-  const [activeLink, setActiveLink] = useState<string>("");
-
-  const clickLink = (link: string) => {
-    setActiveLink(link);
-  };
+  const pathName = usePathname();
   return (
-    <header className="w-full md:w-[85dvw] bg-slate-950/70 border border-cyan-500 shadow-md shadow-cyan-500 rounded-2xl flex flex-col p-5 mx-auto mt-[2%]">
-      <ul className="flex flex-col md:flex-row gap-5 font-semibold w-full hover:*:text-cyan-400">
-        <li>
-          <Link
-            href={"/"}
-            className={
-              activeLink === "/"
-                ? "text-cyan-500 border-b-2 border-cyan-500"
-                : ""
-            }
-            onClick={() => clickLink("/")}
-          >
-            Home
-          </Link>
-        </li>
-        <li>
-          <Link
-            href={"/about"}
-            className={
-              activeLink === "/about"
-                ? "text-cyan-500 border-b-2 border-cyan-500"
-                : ""
-            }
-            onClick={() => clickLink("/about")}
-          >
-            About
-          </Link>
-        </li>
-        <li>
-          <Link
-            href={"/acolyte/v4"}
-            className={
-              activeLink === "/acolyte/v4"
-                ? "text-cyan-500 border-b-2 border-cyan-500"
-                : ""
-            }
-            onClick={() => clickLink("/acolyte/v4")}
-          >
-            Acolyte v4
-          </Link>
-        </li>
-        <li>
-          <Link
-            href={"/acolyte/v5"}
-            className={
-              activeLink === "/acolyte/v5"
-                ? "text-cyan-500 border-b-2 border-cyan-500"
-                : ""
-            }
-            onClick={() => clickLink("/acolyte/v5")}
-          >
-            Acolyte v5
-          </Link>
-        </li>
-        <li><Link
-            href={"/alchemist"}
-            className={
-              activeLink === "/alchemist"
-                ? "text-cyan-500 border-b-2 border-cyan-500"
-                : ""
-            }
-            onClick={() => clickLink("/alchemist")}
-          >
-            Project Alchemist
-          </Link></li>
-        <li>Blog</li>
-        <li className="md:ms-auto">Contact</li>
-        <li>Login</li>
-      </ul>
+    <header className="sticky z-10 top-5">
+      <nav>
+        <ul className="list-none flex flex-row border bg-slate-900/95 border-cyan-300 shadow-md shadow-cyan-300 gap-5 w-fit px-5 py-2 rounded-full">
+          <li>
+            <Link href={"/"} className={`[&.active]:border-b-2 [&.active]:border-cyan-300 [&.active]:text-cyan-300 ${pathName === '/' ? 'active' : ''}`}>
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link href={"/about"} className={`[&.active]:border-b-2 [&.active]:border-cyan-300 [&.active]:text-cyan-300 ${pathName === '/about' ? 'active' : ''}`}>
+              About
+            </Link>
+          </li>
+          <li>
+            <Link href={"/acolyte"} className={`[&.active]:border-b-2 [&.active]:border-cyan-300 [&.active]:text-cyan-300 ${pathName === '/acolyte' ? 'active' : ''}`}>
+              Acolyte
+            </Link>
+          </li>
+        </ul>
+      </nav>
     </header>
   );
 }
