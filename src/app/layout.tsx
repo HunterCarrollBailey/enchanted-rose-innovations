@@ -22,7 +22,7 @@ export default function RootLayout({
       >
         <div className="min-h-screen min-w-screen backdrop-blur-sm flex flex-col items-center p-5 md:p-10 animate-fade animate-once animate-duration-[2500ms] animate-ease-in">
           <Header />
-          <main className="mt-10">{children}</main>
+          <main className="mt-10 w-full lg:w-[85dvw]">{children}</main>
         </div>
       </body>
     </html>
